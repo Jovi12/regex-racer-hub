@@ -180,6 +180,77 @@ const ColorPicker = () => {
             })}
           </div>
         </Card>
+
+        {/* Educational Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">Color Formats Explained</h2>
+            <div className="space-y-3 text-muted-foreground text-sm">
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">HEX (#RRGGBB)</h3>
+                <p>Hexadecimal format widely used in web design. Each pair represents Red, Green, Blue values (00-FF).</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">RGB (Red, Green, Blue)</h3>
+                <p>Additive color model using decimal values (0-255) for each channel. Natural for digital displays.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">HSL (Hue, Saturation, Lightness)</h3>
+                <p>Human-friendly format. Hue (0-360°), Saturation (0-100%), Lightness (0-100%). Intuitive for color manipulation.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">RGBA (RGB + Alpha)</h3>
+                <p>Extends RGB with transparency channel (0-1). Essential for overlays and modern UI design.</p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">Common Use Cases</h2>
+            <div className="space-y-3 text-muted-foreground text-sm">
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Web Design</h3>
+                <p>Choose brand colors, create color schemes, ensure proper contrast ratios for accessibility.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">CSS Styling</h3>
+                <p>Get exact color values for stylesheets, variables, and design systems.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">UI/UX Design</h3>
+                <p>Build consistent color palettes, test color combinations, maintain brand consistency.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Digital Art</h3>
+                <p>Extract colors from references, create harmonious color schemes for graphics.</p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 md:col-span-2">
+            <h2 className="text-xl font-semibold mb-4">Color Accessibility Best Practices</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground text-sm">
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">WCAG Contrast Guidelines</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Normal text: 4.5:1 contrast ratio minimum</li>
+                  <li>Large text (18pt+): 3:1 contrast ratio minimum</li>
+                  <li>AAA level: 7:1 for enhanced accessibility</li>
+                  <li>Test with accessibility tools regularly</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Color Blindness Considerations</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Never rely on color alone to convey information</li>
+                  <li>Test designs with color blindness simulators</li>
+                  <li>Use patterns, icons, and labels alongside colors</li>
+                  <li>Avoid red-green combinations for critical UI</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   );

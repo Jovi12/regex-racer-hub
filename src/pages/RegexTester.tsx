@@ -197,6 +197,80 @@ const RegexTester = () => {
             )}
           </Card>
         </div>
+
+        {/* Educational Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">What are Regular Expressions?</h2>
+            <p className="text-muted-foreground mb-4">
+              Regular expressions (regex) are patterns used to match character combinations in strings. They're a powerful tool for text processing, validation, search, and manipulation across all programming languages.
+            </p>
+            <h3 className="font-semibold mb-2">Common Applications</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 text-sm">
+              <li>Email and phone number validation</li>
+              <li>Password strength checking</li>
+              <li>URL parsing and manipulation</li>
+              <li>Log file analysis</li>
+              <li>Data extraction and web scraping</li>
+              <li>Find and replace operations</li>
+            </ul>
+          </Card>
+
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">Real-World Examples</h2>
+            <div className="space-y-3 text-muted-foreground text-sm font-mono">
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Email Validation</h3>
+                <code className="text-xs bg-muted px-2 py-1 rounded block">^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{"{2,}"}$</code>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Phone Number (US)</h3>
+                <code className="text-xs bg-muted px-2 py-1 rounded block">^\(?\d{"{3}"}\)?[-.\s]?\d{"{3}"}[-.\s]?\d{"{4}"}$</code>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">URL Pattern</h3>
+                <code className="text-xs bg-muted px-2 py-1 rounded block">^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{"{1,256}"}\.[a-zA-Z0-9()]{"{1,6}"}$</code>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Date (YYYY-MM-DD)</h3>
+                <code className="text-xs bg-muted px-2 py-1 rounded block">^\d{"{4}"}-\d{"{2}"}-\d{"{2}"}$</code>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 md:col-span-2">
+            <h2 className="text-xl font-semibold mb-4">Tips for Writing Better Regex</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-muted-foreground text-sm">
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Performance</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Be specific with patterns</li>
+                  <li>Use non-capturing groups when possible</li>
+                  <li>Avoid excessive backtracking</li>
+                  <li>Test with realistic data volumes</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Readability</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Add comments for complex patterns</li>
+                  <li>Break long patterns into smaller parts</li>
+                  <li>Use named capture groups</li>
+                  <li>Document expected input format</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Common Pitfalls</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Remember to escape special characters</li>
+                  <li>Test edge cases thoroughly</li>
+                  <li>Consider Unicode and internationalization</li>
+                  <li>Validate with multiple test strings</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   );

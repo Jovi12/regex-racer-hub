@@ -96,17 +96,67 @@ const Base64Tool = () => {
           </Card>
         </div>
 
-        {/* Info Section */}
-        <Card className="p-6 shadow-card border-border bg-card mt-6">
-          <h3 className="text-lg font-semibold mb-3 text-foreground">About Base64</h3>
-          <p className="text-sm text-muted-foreground mb-2">
-            Base64 is a binary-to-text encoding scheme that represents binary data in ASCII string format.
-            It's commonly used for encoding data in emails, URLs, and data URIs.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            This tool supports Unicode characters and handles encoding/decoding with proper UTF-8 support.
-          </p>
-        </Card>
+        {/* Educational Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">Understanding Base64 Encoding</h2>
+            <p className="text-muted-foreground mb-4">
+              Base64 is a binary-to-text encoding scheme that converts binary data into an ASCII string format. It's commonly used to encode data that needs to be stored or transferred over media designed to handle text.
+            </p>
+            <h3 className="font-semibold mb-2">How It Works</h3>
+            <p className="text-muted-foreground text-sm mb-4">
+              Base64 encoding takes 3 bytes of binary data and converts them into 4 ASCII characters using a 64-character alphabet (A-Z, a-z, 0-9, +, /). This increases the data size by approximately 33%.
+            </p>
+            <h3 className="font-semibold mb-2">When to Use Base64</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1 text-sm">
+              <li>Embedding images in HTML/CSS</li>
+              <li>Sending binary data over text-based protocols</li>
+              <li>Storing credentials in configuration files</li>
+              <li>Email attachments (MIME)</li>
+            </ul>
+          </Card>
+
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">Common Applications</h2>
+            <div className="space-y-4 text-muted-foreground text-sm">
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Web Development</h3>
+                <p>Embed small images directly in CSS or HTML using data URIs: <code className="text-xs bg-muted px-1 py-0.5 rounded">data:image/png;base64,...</code></p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">API Authentication</h3>
+                <p>Basic authentication headers encode username:password in Base64 format.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Data URLs</h3>
+                <p>Include file content directly in URLs for faster page loads on small assets.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Email Systems</h3>
+                <p>MIME encoding uses Base64 to safely transmit binary attachments.</p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 md:col-span-2">
+            <h2 className="text-xl font-semibold mb-4">Security Considerations</h2>
+            <div className="space-y-3 text-muted-foreground text-sm">
+              <div className="bg-destructive/10 border border-destructive/20 rounded p-3">
+                <p className="font-semibold text-destructive mb-1">⚠️ Important: Base64 is NOT encryption</p>
+                <p>Base64 encoding is easily reversible and provides no security. Never use it to "hide" sensitive data like passwords or API keys.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Best Practices</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Use encryption (AES, RSA) for sensitive data, not Base64 alone</li>
+                  <li>Base64 is for encoding, not security</li>
+                  <li>Always validate decoded data before use</li>
+                  <li>Consider file size impact (33% larger when encoded)</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   );

@@ -134,6 +134,79 @@ const CodeMinifier = () => {
             )}
           </Card>
         </div>
+
+        {/* Educational Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">Why Minify Your Code?</h2>
+            <p className="text-muted-foreground mb-4">
+              Code minification removes unnecessary characters from source code without changing functionality. This reduces file size, leading to faster page loads and improved user experience.
+            </p>
+            <h3 className="font-semibold mb-2">Benefits of Minification</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 text-sm">
+              <li><strong>Faster Load Times:</strong> Smaller files download quicker</li>
+              <li><strong>Reduced Bandwidth:</strong> Less data transferred saves costs</li>
+              <li><strong>Better SEO:</strong> Page speed is a ranking factor</li>
+              <li><strong>Improved UX:</strong> Users experience faster, snappier sites</li>
+              <li><strong>Lower Hosting Costs:</strong> Less bandwidth usage</li>
+            </ul>
+          </Card>
+
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">What Gets Removed?</h2>
+            <div className="space-y-3 text-muted-foreground text-sm">
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Whitespace</h3>
+                <p>Spaces, tabs, and line breaks that aren't necessary for code execution</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Comments</h3>
+                <p>All /* comments */ and // inline comments are stripped out</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Optional Characters</h3>
+                <p>Semicolons, brackets, and other syntax that can be safely omitted</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Formatting</h3>
+                <p>Indentation and code formatting that improves readability but adds bytes</p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 md:col-span-2">
+            <h2 className="text-xl font-semibold mb-4">Best Practices for Production</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-muted-foreground text-sm">
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Development vs Production</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Keep readable code for development</li>
+                  <li>Minify only for production builds</li>
+                  <li>Use source maps for debugging</li>
+                  <li>Automate with build tools</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Modern Build Tools</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Webpack, Vite, Rollup</li>
+                  <li>Automatic minification</li>
+                  <li>Tree-shaking dead code</li>
+                  <li>Code splitting</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Testing After Minification</h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Always test minified code</li>
+                  <li>Check for syntax errors</li>
+                  <li>Verify functionality</li>
+                  <li>Monitor performance gains</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   );

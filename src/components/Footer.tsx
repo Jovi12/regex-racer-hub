@@ -25,6 +25,11 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
           </div>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <a href="/privacy" className="hover:text-primary transition-smooth">Privacy Policy</a>
+            <span>•</span>
+            <a href="/terms" className="hover:text-primary transition-smooth">Terms of Service</a>
+          </div>
           <p className="text-sm text-muted-foreground text-center">
             © 2025 DevTools Hub | Built for Developers by Developers
           </p>

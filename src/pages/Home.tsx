@@ -105,6 +105,89 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* About Section */}
+      <section className="container mx-auto px-4 py-12 border-t border-border">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">About DevTools Hub</h2>
+          <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+            <p>
+              DevTools Hub is a comprehensive collection of free online tools designed specifically for developers, web designers, and IT professionals. Our mission is to provide fast, reliable, and privacy-focused utilities that make your daily development tasks easier.
+            </p>
+            <p>
+              Every tool on this platform runs entirely in your browser, ensuring that your sensitive data never leaves your device. Whether you're formatting JSON responses, encoding Base64 strings, minifying production code, picking the perfect color, or testing regular expressions, DevTools Hub has you covered.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-3">Our Philosophy</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>✓ Privacy-first: All processing happens locally</li>
+                  <li>✓ No registration required: Start using tools immediately</li>
+                  <li>✓ Fast & efficient: Optimized for performance</li>
+                  <li>✓ Always free: No hidden costs or premium tiers</li>
+                  <li>✓ Open & accessible: Works on all modern browsers</li>
+                </ul>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-3">Who Uses DevTools Hub?</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>• Frontend & Backend Developers</li>
+                  <li>• Web Designers & UI/UX Professionals</li>
+                  <li>• DevOps & System Administrators</li>
+                  <li>• QA Engineers & Testers</li>
+                  <li>• Computer Science Students</li>
+                  <li>• Technical Writers & Documentarians</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="container mx-auto px-4 py-12 border-t border-border">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Is DevTools Hub really free?</h3>
+              <p className="text-muted-foreground text-sm">
+                Yes! All tools are completely free to use with no hidden costs, subscriptions, or premium features. We believe essential developer tools should be accessible to everyone.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Is my data safe?</h3>
+              <p className="text-muted-foreground text-sm">
+                Absolutely. All tools run entirely in your browser using JavaScript. Your data never leaves your device or gets sent to our servers. We don't store, log, or track any of your input data.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Do I need to create an account?</h3>
+              <p className="text-muted-foreground text-sm">
+                No registration required! Just visit the site and start using any tool immediately. We respect your privacy and don't require personal information.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Which browsers are supported?</h3>
+              <p className="text-muted-foreground text-sm">
+                DevTools Hub works on all modern browsers including Chrome, Firefox, Safari, Edge, and Opera. We recommend using the latest version for the best experience.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Can I use these tools offline?</h3>
+              <p className="text-muted-foreground text-sm">
+                Once a tool page is loaded, it will work offline since all processing happens in your browser. However, you'll need an internet connection to initially access the website.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-2">Will you add more tools?</h3>
+              <p className="text-muted-foreground text-sm">
+                Yes! We're constantly working on adding new developer tools based on community feedback. Follow our GitHub to stay updated on new releases.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -10,6 +10,8 @@ import Base64Tool from "./pages/Base64Tool";
 import CodeMinifier from "./pages/CodeMinifier";
 import ColorPicker from "./pages/ColorPicker";
 import RegexTester from "./pages/RegexTester";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
             <Route path="/minifier" element={<CodeMinifier />} />
             <Route path="/color-picker" element={<ColorPicker />} />
             <Route path="/regex-tester" element={<RegexTester />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

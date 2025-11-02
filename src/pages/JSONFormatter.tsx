@@ -101,6 +101,74 @@ const JSONFormatter = () => {
             </pre>
           </Card>
         </div>
+
+        {/* Educational Content Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">What is JSON?</h2>
+            <p className="text-muted-foreground mb-4">
+              JSON (JavaScript Object Notation) is a lightweight data-interchange format that's easy for humans to read and write, and easy for machines to parse and generate. It's the most popular data format for APIs and web services.
+            </p>
+            <h3 className="font-semibold mb-2">Why Use a JSON Formatter?</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li>Validate JSON syntax to catch errors early</li>
+              <li>Format minified JSON for better readability</li>
+              <li>Debug API responses quickly</li>
+              <li>Compare JSON structures side-by-side</li>
+              <li>Ensure proper nesting and structure</li>
+            </ul>
+          </Card>
+
+          <Card className="p-6">
+            <h2 className="text-xl font-semibold mb-4">Common Use Cases</h2>
+            <div className="space-y-4 text-muted-foreground">
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">API Development</h3>
+                <p className="text-sm">Format and validate API responses to ensure correct data structure before sending to clients.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Configuration Files</h3>
+                <p className="text-sm">Validate package.json, tsconfig.json, and other config files to prevent deployment errors.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Data Migration</h3>
+                <p className="text-sm">Check JSON data structure when moving between databases or services.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Learning & Teaching</h3>
+                <p className="text-sm">Visualize JSON structure to understand nested objects and arrays better.</p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 md:col-span-2">
+            <h2 className="text-xl font-semibold mb-4">Best Practices for Working with JSON</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground">
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">✓ Do's</h3>
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>Use double quotes for strings</li>
+                  <li>Keep property names consistent</li>
+                  <li>Use arrays for lists of similar items</li>
+                  <li>Validate JSON before deployment</li>
+                  <li>Use meaningful property names</li>
+                  <li>Keep JSON structure shallow when possible</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">✗ Don'ts</h3>
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>Don't use single quotes</li>
+                  <li>Avoid trailing commas</li>
+                  <li>Don't include comments (not valid JSON)</li>
+                  <li>Avoid undefined values</li>
+                  <li>Don't use functions or methods</li>
+                  <li>Avoid circular references</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   );
